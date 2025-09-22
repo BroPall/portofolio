@@ -4,33 +4,118 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
 header {
-  background: black;
-  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8); /* hitam solid transparan sedikit */
+  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);       /* efek kaca */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.navbar .logo {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar .nav-links {
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
 
-.navbar .nav-links li a {
+.nav-links li a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3 ease;
+  transition: color 0.3s ease;
 }
 
-.navbar .nav-links li a:hover {
-    color: #60a5fa;
+.nav-links li a:hover {
+  color: #60a5fa;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.button1 {
+  background-color: transparent;
+  border: 2px solid #540C9A;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button1:hover {
+  background-color: #540C9A;
+  color: white;
+}
+
+.button2 {
+  background-color: #540C9A;
+  border: 2px solid #6D328C;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button2:hover {
+  background-color: #6D328C;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("assets/img/hero-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
